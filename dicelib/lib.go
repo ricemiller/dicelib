@@ -1,13 +1,3 @@
-/*
-	Requirements:
-1d10 = rolls 1 10-sided die
-2d10 = rolls 2 10-sided dice
-1d10+1 = rolls 1 10-sided die and adds 1
-1d10+1d4 = rolls 1 10-sided die and adds 1 4-sided die
-
-
-*/
-
 package dice
 
 import (
