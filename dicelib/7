@@ -1,0 +1,15 @@
+package dice
+
+import (
+	"math/rand"
+	"time"
+)
+
+func SimpleRoll(roll string) int {
+	result := 0
+	rand.Seed(time.Now().UnixNano())
+
+
+
+	return result
+}
