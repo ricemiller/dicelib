@@ -2,22 +2,21 @@ package dice
 
 import (
 	"math/rand"
-	"time"
-	"strings"
 	"strconv"
+	"strings"
+	"time"
 )
 
 // MakeRoll returns the result of a die roll
 func MakeRoll(dieType int) int {
 	rand.Seed(time.Now().UnixNano())
-	return (int(rand.Uint64()) % dieType) + 1
+	return (rand.Int() % dieType) + 1
 }
 
 // DummyRoll always returns average (for testing purposes)
 func DummyRoll(dieType int) int {
-	return dieType/2
+	return dieType / 2
 }
-
 
 // SimpleRoll makes a simple roll
 func SimpleRoll(roll string) int {
@@ -48,7 +47,7 @@ func Split(command string) ([]string, []string) {
 	var positives []string
 	var negatives []string
 
-	for i := len(command)-1 ; i >= 0 ; i-- {
+	for i := len(command) - 1; i >= 0; i-- {
 		if command[i] == '+' {
 			positives = append(positives, roll)
 			roll = ""
