@@ -1,14 +1,13 @@
 package main
 
 import (
-	"dicelib/dicelib"
+	"dicelib/dice"
 	"fmt"
 	"os"
 )
 
 func main() {
-
+	dice.Init()
 	command := os.Args[1]
 	fmt.Println(dice.Roll(command))
-
 }
